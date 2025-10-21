@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual envs
+.env/
+.venv/
+venv/
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs and checkpoints
+logs/
+checkpoints/
+
+# Data - DO NOT COMMIT LARGE/RAW DATA
+/data/raw/
+*.edf
+
+# Keep split config tracked
+!data/split/splits.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints/
