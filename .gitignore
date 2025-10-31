@@ -34,6 +34,10 @@ checkpoints/*
 !logs/**/*.json
 !logs/**/*.log
 
+!logs/
+!logs/plots/
+!logs/plots/*.png
+
 !checkpoints/**/*.pkl
 !checkpoints/**/*.ckpt
 !checkpoints/**/*.json
