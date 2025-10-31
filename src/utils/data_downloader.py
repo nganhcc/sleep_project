@@ -19,18 +19,14 @@ file_links = [
     if link.get("href") and link.get("href").endswith(".edf")
 ]
 
-print(f"Found {len(file_links)} EDF files.\n")
 output_file = "links.txt"
 # Write all links to text file
 with open(output_file, "w") as f:
     for url in file_links:
         f.write(url + "\n")
 
-print(f"✅ Wrote {len(file_links)} links to {output_file}")
-
 
 def download_file(href):
-    """Download a single file."""
     file_url = base_url + href
     out_path = os.path.join(output_dir, href)
     if os.path.exists(out_path):
@@ -60,4 +56,4 @@ with ThreadPoolExecutor(max_workers=max_workers) as executor:
         href, status = future.result()
         tqdm.write(f"[{i+1}/{len(file_links)}] {href}: {status}")
 
-print("\n✅ All downloads completed (or skipped if already exist).")
+print("\nAll downloads completed")

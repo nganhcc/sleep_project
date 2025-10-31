@@ -1,33 +1,60 @@
+# ==========================================
 # Byte-compiled / cache
+# ==========================================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
-# Virtual envs
+# ==========================================
+# Virtual environments
+# ==========================================
 .env/
 .venv/
 venv/
 
-# IDE/editor
+# ==========================================
+# IDE/editor settings
+# ==========================================
 .vscode/
 .idea/
 *.code-workspace
 
+# ==========================================
 # Logs and checkpoints
-logs/
-checkpoints/
+# ==========================================
+# Keep directories tracked but ignore temp files inside
+logs/*
+checkpoints/*
 
+# Allow all files (e.g. plots, csv) to be committed
+!logs/**/*.png
+!logs/**/*.csv
+!logs/**/*.txt
+!logs/**/*.json
+!logs/**/*.log
+
+!checkpoints/**/*.pkl
+!checkpoints/**/*.ckpt
+!checkpoints/**/*.json
+!checkpoints/**/*.txt
+
+# ==========================================
 # Data - DO NOT COMMIT LARGE/RAW DATA
+# ==========================================
 /data/raw/
 *.edf
 
 # Keep split config tracked
 !data/split/splits.json
 
-# OS
+# ==========================================
+# OS files
+# ==========================================
 .DS_Store
 Thumbs.db
 
+# ==========================================
 # Notebook checkpoints
+# ==========================================
 .ipynb_checkpoints/
