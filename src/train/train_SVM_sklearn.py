@@ -35,7 +35,7 @@ if not os.path.exists(mean_log_path):
 # =====================================================
 # CONFIG
 # =====================================================
-N_SPLITS = 5
+N_SPLITS = 10
 PARAM_GRID = {"C": [0.1, 1, 10], "kernel": ["linear", "rbf", "poly"]}
 np.random.seed(42)
 
@@ -146,7 +146,7 @@ X_train_bal, y_train_bal = balance_data(X_train, y_train)
 best_svm = SVC(C=float(best_C), kernel=best_kernel)
 best_svm.fit(X_train_bal, y_train_bal)
 
-with open("checkpoints/best_svm_skl.pkl", "wb") as f:
+with open("checkpoints/best_svm_sklearn.pkl", "wb") as f:
     pickle.dump(best_svm, f)
 
 # =====================================================
